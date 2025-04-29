@@ -1,2 +1,60 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# dotenv environment variables
 .env
-node_modules
+.env.*.local
+
+# Build output
+dist/
+build/
+out/
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Debug
+.vscode/
+.idea/
+.DS_Store
+
+# OS-generated
+Thumbs.db
+
+# Optional: if you're using PM2 or any runtime process manager
+pids/
+*.pid
+*.seed
+
+# Optional: if you're using Next.js (for a hybrid project)
+.next/
+
+# Optional: Ignore test coverage output
+coverage/
+
+# Optional: if using jest
+jest-cache/
+jest-output/
+
+# Optional: if using Prisma
+prisma/migrations/
+
+# Ignore local database or dev data
+*.sqlite
+*.sqlite3
+dump.rdb
+
+# Optional: if using Supabase
+.supabase/
+
+# Git itself
+.gitignore
