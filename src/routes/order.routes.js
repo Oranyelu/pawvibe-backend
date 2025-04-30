@@ -1,5 +1,5 @@
-import express from 'express';
-import Order from '../models/order.model';
+const express = require('express');
+const Order = require('../models/order.model');
 
 const router = express.Router();
 
@@ -31,4 +31,4 @@ router.put('/status/:id', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;

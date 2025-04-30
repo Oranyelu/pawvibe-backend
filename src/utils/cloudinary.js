@@ -1,6 +1,9 @@
-import { v2 as cloudinary } from 'cloudinary';
-import multer from 'multer';
-import { CloudinaryStorage } from 'multer-storage-cloudinary';
+const cloudinary = require('cloudinary').v2;
+const multer = require('multer');
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
@@ -16,4 +19,6 @@ const storage = new CloudinaryStorage({
   },
 });
 
-export const upload = multer({ storage });
+const upload = multer({ storage });
+
+module.exports = { upload };

@@ -1,7 +1,7 @@
-import express from 'express';
-import User from '../models/user.model';
-import Product from '../models/product.model';
-import Order from '../models/order.model';
+const express = require('express');
+const User = require('../models/user.model');
+const Product = require('../models/product.model');
+const Order = require('../models/order.model');
 
 const router = express.Router();
 
@@ -50,14 +50,4 @@ router.get('/orders', async (_, res) => {
   }
 });
 
-export default router;
-import { Router } from "express";
-import { getUsers, deleteUser } from "../controllers/admin.controller";
-import { protect } from "../middlewares/auth";
-
-const router = Router();
-
-router.get("/users", protect, getUsers);
-router.delete("/users/:id", protect, deleteUser);
-
-export default router;
+module.exports = router;
